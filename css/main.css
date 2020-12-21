@@ -1,6 +1,233 @@
+/** Custom propertis **/
+
+:root{
+    --primario: #c21b5b;
+    --secundario: #ffc107;
+    --primarioOscuro : rgb(156, 10, 69);
+
+    --fuentePrimaria : 'Arial', Helvetica, sans-serif;
+    --fuenteSecundaria : 'Poppins', sans-serif;
+}
+
 html {
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+body{
+    background-color: var(--primario);
+    font-family: var(--fuentePrimaria);
+}
+
+.bg-amarillo{
+    background-color: var(--secundario);
+}
+
+.bg-blanco{
+    background-color: #ffffff;
+}
+
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sombra{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1, h1{
+    font-family: var(--fuenteSecundaria);
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    padding: 20px;
+    color: #ffffff;
+}
+
+h2{
+    font-size: 2rem;
+    color:  var(--primario);
+    text-align: center;
+}
+
+.contenedor-barra{
+ background-color: var(--primarioOscuro);
+}
+
+.barra{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+/** Botones **/
+.btn{
+    font-size: 2rem;
+    text-decoration: none;
+}
+.btn-editar{
+    color: var(--secundario);
+}
+.btn-borrar{
+    color: var(--primario);
+}
+
+.volver{
+    background-color: var(--secundario);
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+/** formulario **/
+
+form {
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+form legend {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    text-align: center;
+}
+
+legend span{
+    font-size: 1rem;
+    margin-top: 1rem;
+    clear: both;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+/** Campos **/
+
+
+
+@media only screen and (min-width: 768px) {
+    .campos{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .campo{
+        flex: 0 0 calc(33.3% - 1rem);
+        width: 100%;
+    }
+}
+
+.campo{
+    padding: .5rem 0;
+}
+.campo label{
+    font-size: 1.2rem;
+}
+
+.campo input[type="text"],
+.campo input[type="tel"]{
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    height: 3rem;
+    margin-top: .5rem;
+}
+
+.enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.campo input[type="submit"]{
+    background-color: var(--primario);
+    border: none;
+    color: #ffffff;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: background-color .3s ease;
+    flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .campo input[type="submit"]{
+        flex: 0 0 auto;
+    }
+}
+
+.campo input[type="submit"]:hover{
+    background-color: var(--primarioOscuro);
+    cursor: pointer;
+}
+
+/** Listado de contactos**/
+
+.contactos{
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.contenedor-contactos{
+    max-width: 800px;
+    margin: 4rem auto 0 auto;
+}
+
+.buscador{
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    margin: 2rem 0;
+}
+
+.contenedor-tabla{
+    overflow: scroll;
+}
+
+.listado-contactos{
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.listado-contactos thead{
+    background-color: var(--primario);
+    color: #ffffff;
+}
+
+.listado-contactos thead th{
+    padding: 1rem;
+}
+
+.listado-contactos tbody td{
+    padding: .5rem;
+}
+
+.listado-contactos tbody td:nth-child(4){
+    text-align: center;
+}
+
+.listado-contactos button{
+    background-color: transparent!important;
+    border: none;
+}
+
+.total-contactos{
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--primario);
+    font-size: 2rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+.total-contactos span{
+    font-size: 3rem;
+    font-weight: 900;
 }
