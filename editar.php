@@ -1,3 +1,15 @@
+<?php 
+    include 'includes/funciones/funciones.php';
+    $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+
+    if(!$id){
+        die('No valido');
+    }
+
+    $resultado = contactoById($id);
+    $contacto = $resultado->fetch_assoc();
+?>
+
 <?php include_once "includes/templates/header.php" ?>
 
     <div class="contenedor-barra">
